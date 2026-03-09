@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "accent": "#B8860B", // California Gold
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white py-2 px-4 text-center text-[10px] md:text-xs font-bold tracking-widest uppercase">
+        <div class="container mx-auto flex justify-center items-center gap-2">
+            <span class="material-symbols-outlined text-sm">campaign</span>
+            Notice: New health and safety regulations effective July 2024.
+            <a class="underline hover:text-accent ml-2" href="#">Read More</a>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="home.html" class="flex items-center gap-3 group">
+                <div
+                    class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
+                    <span class="material-symbols-outlined text-2xl">content_cut</span>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-primary dark:text-white font-black text-lg leading-none">CA BOARD OF</h1>
+                    <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest leading-tight">Barbering
+                        &amp; Cosmetology</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="text-sm font-bold text-primary border-b-2 border-primary pb-1 transition-all"
+                    href="home.html">Home</a>
+                <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                    href="about.html">About</a>
+                <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                    href="applicantsjourney.html">Applicants</a>
+                <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                    href="forms&application.html">Forms</a>
+                <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                    href="#">Consumers</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-slate-500 hover:text-primary transition-colors hidden md:block">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <div class="h-6 w-px bg-slate-200 dark:bg-slate-700 hidden md:block"></div>
+                <a href="login.html"
+                    class="text-sm font-bold text-slate-600 hover:text-primary transition-colors hidden md:block">Login</a>
+                <a href="signup.html"
+                    class="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    Breeze Sign Up
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-[700px] flex items-center pt-10 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-background-dark dark:via-background-dark/80 z-10">
+            </div>
+            <img alt="Modern professional salon interior" class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1549413222-181340b6e15d?auto=format&fit=crop&q=80&w=2070" />
+        </div>
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="max-w-3xl">
+                <span
+                    class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold uppercase tracking-widest mb-6">Department
+                    of Consumer Affairs</span>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] mb-6">
+                    Regulating Excellence <br />
+                    <span class="text-primary">in California's</span> <br />
+                    Beauty Industry
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+                    Ensuring health and safety standards across the Golden State's professional personal care services
+                    through licensing, inspection, and consumer protection.
+                </p>
+                <!-- Quick Action Tiles -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a class="glass-card group p-6 rounded-xl border border-slate-200 hover:border-primary hover:shadow-xl transition-all"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">verified_user</span>
+                        <h3 class="font-bold text-slate-900">Verify</h3>
+                        <p class="text-xs text-slate-500 mt-1">Check a License</p>
+                    </a>
+                    <a class="glass-card group p-6 rounded-xl border border-slate-200 hover:border-primary hover:shadow-xl transition-all"
+                        href="applicantsjourney.html">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">app_registration</span>
+                        <h3 class="font-bold text-slate-900">Apply</h3>
+                        <p class="text-xs text-slate-500 mt-1">Get Licensed</p>
+                    </a>
+                    <a class="glass-card group p-6 rounded-xl border border-slate-200 hover:border-primary hover:shadow-xl transition-all"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">autorenew</span>
+                        <h3 class="font-bold text-slate-900">Renew</h3>
+                        <p class="text-xs text-slate-500 mt-1">Keep it Current</p>
+                    </a>
+                    <a class="glass-card group p-6 rounded-xl border border-slate-200 hover:border-primary hover:shadow-xl transition-all"
+                        href="#">
+                        <span
+                            class="material-symbols-outlined text-red-600 text-3xl mb-4 group-hover:scale-110 transition-transform">report_problem</span>
+                        <h3 class="font-bold text-slate-900">File</h3>
+                        <p class="text-xs text-slate-500 mt-1">Report Issues</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- User Guided Paths -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-4">How can we help you?</h2>
+                <div class="h-1.5 w-20 bg-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Students -->
+                <div
+                    class="group relative p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/20 transition-all">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined text-4xl">school</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Students &amp; Applicants</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Examination
+                            Information
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Approved
+                            Schools List
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span>
+                            Requirements for License
+                        </li>
+                    </ul>
+                    <a class="inline-flex items-center font-bold text-primary hover:gap-2 transition-all"
+                        href="applicantsjourney.html">
+                        Portal for Students <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Professionals -->
+                <div
+                    class="group relative p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/20 transition-all">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined text-4xl">face</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Professionals</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Continuing
+                            Education
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Change of
+                            Address/Name
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Safety
+                            Bulletins
+                        </li>
+                    </ul>
+                    <a class="inline-flex items-center font-bold text-primary hover:gap-2 transition-all" href="#">
+                        Licensee Services <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Establishment Owners -->
+                <div
+                    class="group relative p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-transparent hover:border-primary/20 transition-all">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                        <span class="material-symbols-outlined text-4xl">store</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Salon &amp; Shop Owners</h3>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Opening a
+                            Business
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Inspection
+                            Checklist
+                        </li>
+                        <li class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-sm text-accent">chevron_right</span> Labor Law
+                            Requirements
+                        </li>
+                    </ul>
+                    <a class="inline-flex items-center font-bold text-primary hover:gap-2 transition-all" href="#">
+                        Business Toolkit <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Resources & News -->
+    <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl font-black mb-2">Essential Resources</h2>
+                    <p class="text-slate-500">Stay informed with the latest updates and publications</p>
+                </div>
+                <button class="text-primary font-bold flex items-center gap-2 hover:underline">
+                    View News Archive <span class="material-symbols-outlined">history</span>
+                </button>
+            </div>
+            <div class="grid lg:grid-cols-4 gap-6">
+                <div
+                    class="lg:col-span-2 bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <span class="text-accent font-bold text-xs uppercase tracking-tighter">Featured
+                            Publication</span>
+                        <h3 class="text-2xl font-bold mt-4 mb-4">Board Bulletin: Fall 2024 Issue</h3>
+                        <p class="text-slate-500 mb-8 leading-relaxed">The latest board actions, legislative updates,
+                            and health reminders for all California beauty professionals.</p>
+                        <button
+                            class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all">Download
+                            PDF</button>
+                    </div>
+                    <div
+                        class="absolute right-[-20px] bottom-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-[180px]">auto_stories</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <span class="material-symbols-outlined text-accent mb-4">gavel</span>
+                    <h4 class="font-bold text-lg mb-2">Laws &amp; Regulations</h4>
+                    <p class="text-sm text-slate-500 mb-6">Review the statutes that govern the barbering and cosmetology
+                        industry.</p>
+                    <a class="text-primary text-sm font-bold flex items-center gap-1 group" href="#">Learn more <span
+                            class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span></a>
+                </div>
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <span class="material-symbols-outlined text-accent mb-4">groups</span>
+                    <h4 class="font-bold text-lg mb-2">Board Meetings</h4>
+                    <h3 class="text-2xl font-black text-primary mb-1">Oct 12</h3>
+                    <p class="text-xs font-bold text-slate-400 uppercase mb-4 tracking-widest">Next Meeting</p>
+                    <a class="text-primary text-sm font-bold flex items-center gap-1 group" href="#">Join via Webcast
+                        <span
+                            class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Leadership Section -->
+    <section class="py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2">
+                    <img alt="Executive Director Portrait" class="rounded-3xl shadow-2xl w-full max-w-md mx-auto"
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2000" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl font-black text-slate-900 dark:text-white mb-6">Protecting the Health &amp;
+                        Safety of All Californians</h2>
+                    <div class="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed italic text-lg">
+                        "Our mission is clear: to maintain the highest standards of professional conduct and safety in
+                        the personal care industry. Through education, inspection, and fair enforcement, we ensure that
+                        every person sitting in a chair across California receives safe, high-quality service."
+                    </div>
+                    <div class="mt-8">
+                        <p class="font-bold text-slate-900 dark:text-white text-xl">Executive Leadership</p>
+                        <p class="text-accent font-medium">CA Board of Barbering &amp; Cosmetology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                            <span class="material-symbols-outlined text-lg">content_cut</span>
+                        </div>
+                        <h2 class="font-black text-xl">BBC</h2>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-6 leading-relaxed">
+                        The California Board of Barbering and Cosmetology protects consumers by licensing and regulating
+                        the industry through health and safety standards.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-amber-500 transition-colors" href="home.html">Home</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="about.html">About Board</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="applicantsjourney.html">Applicant
+                                Journey</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="forms&application.html">Forms &
+                                Apps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Resources</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">Health &amp; Safety</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">Publications</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">Laws &amp; Regs</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">Board Meetings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-6">Support</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-amber-500 transition-colors" href="login.html">Breeze Login</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="signup.html">Register</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">Help Center</a></li>
+                        <li><a class="hover:text-amber-500 transition-colors" href="#">File a Complaint</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col md:flex-row items-center gap-6 text-xs font-medium text-slate-500">
+                    <p>© 2024 California Department of Consumer Affairs</p>
+                    <a class="hover:text-slate-300" href="#">Privacy Policy</a>
+                    <a class="hover:text-slate-300" href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
